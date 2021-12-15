@@ -1,0 +1,554 @@
+:root {
+  --primery-color: #2196f3;
+  --main-txt-color: #212121;
+  --background-color: #e5e5e5;
+  --background2-color: #2f303a;
+  --background3-color: #f5f4fa;
+  --primery-font: 'Roboto', san-serif;
+  --secondary-font: 'Raleway', san-serif;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/*Вынесены общие стили*/
+
+body {
+  font-family: var(--primery-font);
+  font-style: normal;
+  font-weight: normal;
+  background: var(--background-color);
+  color: var(--main-txt-color);
+}
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*Конец вынесения общих стилей*/
+
+/*Вынесены стили хэдэра*/
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--primery-color);
+}
+.logo > span {
+  color: #000000;
+}
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-color);
+}
+.link:hover {
+  color: var(--primery-color);
+}
+.link:focus {
+  color: var(--primery-color);
+}
+.link:active {
+  color: var(--primery-color);
+}
+/*Конец вынесения стилей хэдера*/
+
+/*Вынесены стили кнопок*/
+.order-button {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: var(--primery-color);
+  border-radius: 4px;
+  border: 0;
+  padding: 10px 0px;
+  min-width: 200px;
+}
+.button {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  background-color: var(--background3-color);
+  border-radius: 4px;
+  border: 1px solid var(--background3-color);
+}
+.button:hover {
+  background: var(--primery-color);
+  border: 1px solid var(--primery-color);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.bbutton:focus {
+  background: var(--primery-color);
+  border: 1px solid var(--primery-color);
+  color: #ffffff;
+}
+/*Конец вынесения стилей кнопок*/
+
+/*Вынесены стили заголовков и подписей*/
+.heading-first {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.portfolio-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-txt-color);
+}
+.heading-second {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.heading-third {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.heading-fourth {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.job {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*Конец вынесения стилей заголовков и подписей*/
+
+/*Вынесены стили абзацов*/
+.text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/*Конец вынесения стилей абзацов*/
+
+/*Вынесены стили футера*/
+.footer-contact {
+  font-family: var(--primery-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-contact.area {
+  color: #ffffff;
+}
+.footer-box-portfolio > .container > .style > .logo > span,
+.footer-box-index > .container > .style > .logo > span {
+  color: #ffffff;
+}
+.style-join > .heading-second {
+  font-family: var(--primery-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #ffffff;
+  padding: 0;
+}
+
+/*Конец вынесения стилей футера*/
+
+.container {
+  width: 1200px;
+  margin: 0 auto 0;
+  /* border: 2px solid tomato; */
+}
+
+/*========================= Header ===================================*/
+.header {
+  height: 80px;
+  background-color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  padding: 24px 0 25px 0;
+}
+.header-style,
+.navbar,
+.adress-boxes,
+.nav-boxes {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.logo {
+  margin-right: 50px;
+  margin-left: 0px;
+}
+.adress-boxes {
+  margin-left: auto;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 0 auto;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.link:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-item svg {
+  margin: 0px 10px 0px 0px;
+}
+.nav-item:hover svg,
+.nav-item:focus svg {
+  fill: var(--primery-color);
+}
+/*========================= Hero ===================================*/
+.hero-section {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/img-bg.jpg);
+  background-color: var(--background2-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 200px 0px;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto 0;
+}
+.heading-first {
+  /* padding-top: 200px; */
+  padding-bottom: 30px;
+}
+
+/*========================= Buttons portfolio ===================================*/
+.section-button {
+  background-color: #ffffff;
+}
+.button-boxes {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 94px 0px 50px 0px;
+}
+.button-item:not(:last-child) {
+  margin-right: 8px;
+}
+.button {
+  padding: 6px 22px;
+}
+
+/*========================= Categories portfolio ===================================*/
+.section-categories {
+  background-color: #ffffff;
+  padding: 0px 0px 94px 0px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+.category-img {
+  display: block;
+}
+.category-item {
+  background-color: #ffffff;
+}
+.portfolio-description {
+  padding: 20px 0px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.category-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.category-item:not(:nth-child(n + 7)) {
+  margin-bottom: 30px;
+}
+.portfolio-title,
+.portfolio-text {
+  margin: 0 24px;
+}
+.portfolio-text {
+  margin-top: 4px;
+}
+.category-item:hover,
+.category-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+/*========================= Credo ===================================*/
+.middle-section {
+  padding: 94px 0px;
+  background-color: #ffffff;
+}
+.credo {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  height: 251px;
+  padding: 0px;
+}
+.credo-item {
+  width: 270px;
+  height: auto;
+}
+/* --переделывает подключение иконок с SVG-спрайт на :before -- */
+/* .credo-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-color: #f5f4fa;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  margin-bottom: 30px;
+} */
+/* .icon-antenna::before {
+  background-image: url(../images/icon-antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/icon-clock.svg);
+}
+.icon-diagrama::before {
+  background-image: url(../images/icon-diagrama.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/icon-astronaut.svg);
+} */
+/* ----------------------------------------------------- */
+.credo-item:not(:last-child) {
+  margin-right: 30px;
+}
+.heading-third {
+  margin-bottom: 10px;
+}
+
+/* --переделывает подключение иконок с :before SVG-спрайт-- */
+.credo-item > svg {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+/*========================= Example ===================================*/
+.example-section {
+  padding: 0px 0px 94px 0px;
+  background-color: #ffffff;
+}
+.heading-second {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.do-example {
+  display: flex;
+  justify-content: space-between;
+  /* padding-bottom: 94px; */
+  margin: 0;
+  padding-left: 0;
+}
+.employee-img {
+  display: block;
+}
+
+/*========================= Team ===================================*/
+.job-section {
+  background-color: var(--background3-color);
+  padding: 94px 0px;
+}
+
+.employee-list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+  margin: 0;
+  padding-left: 0;
+}
+.employee {
+  height: 428px;
+  /* margin-bottom: 94px; */
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.heading-fourth,
+.job {
+  text-align: center;
+  margin: 0px;
+}
+.heading-fourth {
+  margin-top: 30px;
+}
+.job {
+  margin-top: 10px;
+}
+.employee-socials {
+  display: flex;
+  justify-content: center;
+  margin: 30px 32px 16px 32px;
+  padding: 0;
+}
+.employee-socials li:not(:last-child) {
+  margin-right: 10px;
+}
+.employee-social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.employee-social-link svg {
+  fill: #afb1b8;
+}
+.employee-social-link:hover,
+.employee-social-link:focus {
+  background-color: var(--primery-color);
+}
+.employee-social-link:hover svg,
+.employee-social-link:focus svg {
+  fill: #ffffff;
+}
+/*========================= Clients ===================================*/
+.client-section {
+  background-color: #ffffff;
+  padding: 94px 0px;
+}
+.client-list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+  margin: 0;
+  padding-left: 0;
+}
+.client {
+  display: flex;
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  margin: 0px;
+  fill: #afb1b8;
+  cursor: pointer;
+}
+
+.client:hover,
+.client:focus {
+  fill: var(--primery-color);
+  border: 1px solid var(--primery-color);
+}
+/*========================= Footer ===================================*/
+.footer-box-index,
+.footer-box-portfolio {
+  background-color: var(--background2-color);
+}
+.footer-part {
+  display: flex;
+}
+.style {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 70px 60px 0px;
+  /* width: 400px; */
+}
+.footer-box-index > .container > .style > .logo {
+  padding-bottom: 20px;
+  margin: 0;
+}
+.footer-box-portfolio > .container > .style > .logo {
+  padding-bottom: 20px;
+  margin: 0;
+}
+.footer-contacts {
+  padding-left: 0;
+  margin: 0;
+}
+.link-contact:not(:last-child) {
+  margin: 0px 0px 9px 0px;
+}
+.style-join {
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+}
+.join-socials {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px 0px 0px;
+  padding: 0;
+}
+.join-socials li:not(:last-child) {
+  margin-right: 10px;
+}
+.join-social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.join-social-link svg {
+  fill: #ffffff;
+}
+.join-social-link:hover,
+.join-social-link:focus {
+  background-color: var(--primery-color);
+}
