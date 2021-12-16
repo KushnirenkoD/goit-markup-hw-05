@@ -36,6 +36,9 @@ p {
   margin: 0;
   padding: 0;
 }
+img {
+  display: block;
+}
 
 /*Конец вынесения общих стилей*/
 
@@ -57,6 +60,9 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-txt-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover {
   color: var(--primery-color);
@@ -92,18 +98,23 @@ p {
   background-color: var(--background3-color);
   border-radius: 4px;
   border: 1px solid var(--background3-color);
+  transition-property: border, color, box-shadow, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
-  background: var(--primery-color);
+  background-color: var(--primery-color);
   border: 1px solid var(--primery-color);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.bbutton:focus {
-  background: var(--primery-color);
+.button:focus {
+  background-color: var(--primery-color);
   border: 1px solid var(--primery-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*Конец вынесения стилей кнопок*/
 
@@ -211,6 +222,7 @@ p {
   text-align: center;
   border-bottom: 1px solid #ececec;
   padding: 24px 0 25px 0;
+  overflow: hidden;
 }
 .header-style,
 .navbar,
@@ -240,12 +252,69 @@ p {
 .link:not(:last-child) {
   margin-right: 50px;
 }
-.nav-item a {
+.nav-item > a {
   display: inline-flex;
   flex-direction: row-reverse;
 }
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -36px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition-property: translateY(100%), background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.underline:hover::after {
+  transform: translateY(-100%);
+  background-color: var(--primery-color);
+}
+
+/* не работает focus и active надо разобраться  */
+.underline:focus::after {
+  transform: translateY(-100%);
+  background-color: var(--primery-color);
+}
+.underline:active::after {
+  transform: translateY(-100%);
+  background-color: var(--primery-color);
+}
+/* .nice {
+  width: 100px;
+  text-align: center;
+  padding: 1rem;
+  color: #2196f3;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0px;
+  overflow: hidden;
+}
+.nice::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: currentColor;
+  transform: translateY(0%);
+  transition: 0.3s linear transform;
+}
+.nice:hover::before {
+  transform: translateY(-100%);
+} */
+
 .link svg {
   margin: 0px 10px 0px 0px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover svg,
 .link:focus svg {
@@ -304,6 +373,9 @@ p {
 }
 .category-item {
   background-color: #ffffff;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-description {
   padding: 20px 0px;
@@ -323,11 +395,32 @@ p {
 .portfolio-text {
   margin-top: 4px;
 }
-.category-item:hover,
-.category-item:focus {
+.category-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* не работает focus, надо разобраться!!! */
+.category-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  background-color: #000000;
+}
+/* .overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-box:hover .owerlay {
+  transform: translateX(0);
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primery-color);
+  transform: translateX(-100%);
+  transition: transform 250ms ease;
+} */
+
 /*========================= Credo ===================================*/
 .middle-section {
   padding: 94px 0px;
@@ -397,18 +490,31 @@ p {
   padding-bottom: 50px;
   text-align: center;
 }
+.heading-third {
+  color: #ffffff;
+  margin: 0;
+}
 
 .do-example {
   display: flex;
   justify-content: space-between;
-  /* padding-bottom: 94px; */
   margin: 0;
   padding-left: 0;
+  position: relative;
 }
 .employee-img {
   display: block;
 }
-
+.do-bg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 370px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0px;
+}
 /*========================= Team ===================================*/
 .job-section {
   background-color: var(--background3-color);
@@ -457,6 +563,9 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .employee-social-link svg {
   fill: #afb1b8;
@@ -490,6 +599,9 @@ p {
   margin: 0px;
   fill: #afb1b8;
   cursor: pointer;
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client:hover,
@@ -547,7 +659,10 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-social-link svg {
   fill: #ffffff;
