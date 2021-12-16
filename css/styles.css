@@ -240,11 +240,15 @@ p {
 .link:not(:last-child) {
   margin-right: 50px;
 }
-.nav-item svg {
+.nav-item a {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+.link svg {
   margin: 0px 10px 0px 0px;
 }
-.nav-item:hover svg,
-.nav-item:focus svg {
+.link:hover svg,
+.link:focus svg {
   fill: var(--primery-color);
 }
 /*========================= Hero ===================================*/
