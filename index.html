@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    
+<!-- =============================== Header =============================== -->
     <header class="header">
         <div class="container">
             <div class="header-style">
@@ -46,15 +46,26 @@
     </header>
     
     <main>
-        
+<!-- =============================== Hero =============================== -->
         <section class="hero-section">
             <div class="container">
                 <h1 class="heading-first">Эффективные решения <br/> для вашего бизнеса</h1>
-                <button class="order-button" type="button">Заказать услугу</button>
+                <button class="order-button" type="button" data-modal-open>Заказать услугу</button>               
+                <div class="backdrop is-hidden"  data-modal>
+                    <div class="modal">
+                        <P></P>                        
+                        <button class="close-button" type="button" data-modal-close>
+                            <svg width=18px height=18px>
+                                <use href="./images/icons.svg#icon-close-black"></use>
+                            </svg>
+                        </button>
+                    
+                    </div>
+                </div>
             </div>
         </section>
-        
     <div class="middle-part">
+<!-- =============================== Credo =============================== -->
         <section class="middle-section">
             <div class="container">
                <h2 hidden class="heading-second">Наше кредо</h2>
