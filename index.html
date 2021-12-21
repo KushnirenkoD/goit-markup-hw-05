@@ -51,25 +51,14 @@
             <div class="container">
                 <h1 class="heading-first">Эффективные решения <br/> для вашего бизнеса</h1>
                 <button class="order-button" type="button" data-modal-open>Заказать услугу</button>               
-                <div class="backdrop is-hidden"  data-modal>
-                    <div class="modal">
-                        <P></P>                        
-                        <button class="close-button" type="button" data-modal-close>
-                            <svg width=18px height=18px>
-                                <use href="./images/icons.svg#icon-close-black"></use>
-                            </svg>
-                        </button>
-                    
-                    </div>
-                </div>
             </div>
         </section>
-    <div class="middle-part">
+        <div class="middle-part">
 <!-- =============================== Credo =============================== -->
-        <section class="middle-section">
-            <div class="container">
-               <h2 hidden class="heading-second">Наше кредо</h2>
-                <ul class="credo">
+<section class="middle-section">
+    <div class="container">
+        <h2 hidden class="heading-second">Наше кредо</h2>
+        <ul class="credo">
                     <li class="credo-item icon-antenna">
                         <!-- переделывает подключение иконок с :before на SVG-спрайт -->
                         <svg>
@@ -135,19 +124,19 @@
             </div>
         </section>
     </div>    
-        <section class="job-section">
-            <div class="container">
-                <h2 class="heading-second">Наша команда</h2>
-                <ul class="employee-list">
-                    <li class="employee">
-                        <img class="employee-img" src="./images/img_main4.jpg" alt="Product Designer" width="270" height="260" />
-                        <h4 class="heading-fourth">Игорь Демьяненко</h4>
-                        <p class="job">Product Designer</p>
-                        <ul class="employee-socials">
-                            <li class="employee-socials-list">
-                                <a href="#" class="employee-social-link" aria-label="Instagram">
-                                    <svg width="20" height="20">
-                                        <use href="./images/icons.svg#icon-instagram"></use>
+    <section class="job-section">
+        <div class="container">
+            <h2 class="heading-second">Наша команда</h2>
+            <ul class="employee-list">
+                <li class="employee">
+                    <img class="employee-img" src="./images/img_main4.jpg" alt="Product Designer" width="270" height="260" />
+                    <h4 class="heading-fourth">Игорь Демьяненко</h4>
+                    <p class="job">Product Designer</p>
+                    <ul class="employee-socials">
+                        <li class="employee-socials-list">
+                            <a href="#" class="employee-social-link" aria-label="Instagram">
+                                <svg width="20" height="20">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </li>
@@ -367,6 +356,17 @@
             </div>
         </div>
     </footer>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <P></P>                        
+            <button class="close-button" type="button" data-modal-close>
+                <svg width=18px height=18px>
+                    <use href="./images/icons.svg#icon-close-black"></use>
+                </svg>
+            </button>          
+        </div>
+    </div>
     <script src="./js/modal.js"></script>
 </body>
 </html>

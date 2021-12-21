@@ -6,6 +6,8 @@
   --background3-color: #f5f4fa;
   --primery-font: 'Roboto', san-serif;
   --secondary-font: 'Raleway', san-serif;
+  --time: 250ms;
+  --time-f: cubic-bezier(0.4, 0, 0.2, 1);
 }
 ul,
 ol {
@@ -62,8 +64,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-txt-color);
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .link:hover,
 .link:focus {
@@ -89,7 +91,7 @@ img {
   margin: 0;
 }
 .logo {
-  margin-right: 50px;
+  margin-right: 93px;
   margin-left: 0px;
 }
 .adress-boxes {
@@ -124,8 +126,8 @@ img {
   background-color: currentColor;
   border-radius: 2px;
   transition-property: translateY(100%), background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .underline:hover::after,
 .underline:focus::after {
@@ -136,8 +138,8 @@ img {
 .link svg {
   margin: 0px 10px 0px 0px;
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .link:hover svg,
 .link:focus svg {
@@ -170,8 +172,8 @@ img {
   border-radius: 4px;
   border: 1px solid var(--background3-color);
   transition-property: border, color, box-shadow, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .button:hover {
   background-color: var(--primery-color);
@@ -339,8 +341,8 @@ img {
 .category-item {
   background-color: #ffffff;
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .portfolio-description {
   padding: 20px 0px;
@@ -360,12 +362,14 @@ img {
 .portfolio-text {
   margin-top: 4px;
 }
-.category-item:hover,
+.category-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .category-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
 .overlay-box {
   position: relative;
   overflow: hidden;
@@ -380,7 +384,10 @@ img {
   transform: translateY(0%);
   transition: transform 250ms ease;
 }
-.overlay-box:hover .overlay-shade {
+.category-item:hover .overlay-shade {
+  transform: translateY(-100%);
+}
+.link:focus .overlay-shade {
   transform: translateY(-100%);
 }
 .overlay-shade > p {
@@ -536,8 +543,8 @@ img {
   align-items: center;
   border-radius: 50%;
   transition-property: background-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .employee-social-link svg {
   fill: #afb1b8;
@@ -572,8 +579,8 @@ img {
   fill: #afb1b8;
   cursor: pointer;
   transition-property: fill, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 
 .client:hover,
@@ -633,8 +640,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--time);
+  transition-timing-function: var(--time-f);
 }
 .join-social-link svg {
   fill: #ffffff;
@@ -654,7 +661,7 @@ img {
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   visibility: visible;
-  transform: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: opacity var(--time) var(--time-f), visibility var(--time) var(--time-f);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -675,10 +682,11 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time) var(--time-f);
 }
 .close-button {
   position: fixed;
+  display: flex;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -686,4 +694,6 @@ img {
   right: 8px;
   padding: 0;
   margin: 0;
+  justify-content: center;
+  align-items: center;
 }
