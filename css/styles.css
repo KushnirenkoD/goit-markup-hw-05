@@ -697,3 +697,6 @@ img {
   justify-content: center;
   align-items: center;
 }
+.close-button:hover {
+  cursor: pointer;
+}
