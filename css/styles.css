@@ -71,6 +71,9 @@ img {
 .link:focus {
   color: var(--primery-color);
 }
+.link.active {
+  color: var(--primery-color);
+}
 
 /*Вынесены стили объектов*/
 .header {
@@ -131,6 +134,10 @@ img {
 }
 .underline:hover::after,
 .underline:focus::after {
+  transform: translateY(-100%);
+  background-color: var(--primery-color);
+}
+.uactive::after {
   transform: translateY(-100%);
   background-color: var(--primery-color);
 }
@@ -696,6 +703,8 @@ img {
   margin: 0;
   justify-content: center;
   align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .close-button:hover {
   cursor: pointer;
